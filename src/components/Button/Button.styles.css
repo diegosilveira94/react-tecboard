@@ -1,0 +1,15 @@
+.button-form {
+  background: #17d9b1;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.button-form:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

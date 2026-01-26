@@ -1,0 +1,8 @@
+.input-form {
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #4a4949;
+  color: #ffffff;
+}
