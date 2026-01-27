@@ -5,14 +5,7 @@ import Label from "../Label";
 import TitleForm from "../TitleForm";
 import Select from "../Select";
 import Button from "../Button";
-
-const options = [
-  { value: "Hackathon", children: "Hackathon" },
-  { value: "Workshop", children: "Workshop" },
-  { value: "Conferência", children: "Conferência" },
-  { value: "Meetup", children: "Meetup" },
-];
-
+import { themes } from "../../data/themes";
 function EventForm() {
   return (
     <form className="form-evento">
@@ -41,7 +34,7 @@ function EventForm() {
           <Label className="label-form" htmlFor="eventTheme">
             Tema do Evento
           </Label>
-          <Select id="eventTheme" className="select-form" options={options} />
+          <Select id="eventTheme" className="select-form" options={themes} />
         </Fieldset>
       </div>
       <div className="acoes">

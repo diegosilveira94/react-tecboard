@@ -1,11 +1,11 @@
-export interface OptionProps {
-  value: string;
-  children: React.ReactNode;
+export interface SelectOption {
+  id: string;
+  name: string;
 }
 
 export interface SelectProps {
-  options: OptionProps[];
-  id: string;
+  options: SelectOption[];
+  id?: string;
   className: string;
   name?: string;
   placeholder?: string;
