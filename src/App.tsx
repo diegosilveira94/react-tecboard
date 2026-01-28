@@ -1,4 +1,5 @@
 import "./App.css";
+import Banner from "./components/Banner";
 import EventForm from "./components/EventForm";
 import TitleTheme from "./components/TitleTheme";
 import { themes } from "./data/themes";
@@ -11,9 +12,7 @@ function App() {
       <header>
         <img src="/logo.png" alt="" />
       </header>
-      <section>
-        <img src="/banner.png" alt="" />
-      </section>
+      <Banner className="banner" alt="banner" src="./banner.png"></Banner>
       <EventForm />
       <section>
         <TitleTheme className="title-theme" themes={themes}></TitleTheme>

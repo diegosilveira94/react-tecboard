@@ -1,0 +1,9 @@
+.banner {
+  background: linear-gradient(#17e4b9, #091d24);
+  display: flex;
+  justify-content: center;
+}
+
+.banner img {
+  max-width: 90%;
+}
