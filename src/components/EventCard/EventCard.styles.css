@@ -1,0 +1,58 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+}
+
+.event-card p,
+.event-card h4 {
+  margin: 0;
+}
+
+.event-card .body {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #212121;
+  align-items: flex-start;
+  max-height: 241px;
+  max-width: 250px;
+  padding: 24px 16px;
+}
+
+.event-card .tag {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #4a4949;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 120%;
+  letter-spacing: 10%;
+}
+
+.event-card .date {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.event-card .title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.event-card .description {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}

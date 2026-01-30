@@ -1,16 +1,8 @@
 import "./TitleTheme.styles.css";
 import type { TitleThemeProps } from "./TitleTheme.types";
 
-function TitleTheme({ className, themes }: TitleThemeProps) {
-  return (
-    <div className="themes-container">
-      {themes.map((theme) => (
-        <h3 key={theme.id} className={className}>
-          {theme.name}
-        </h3>
-      ))}
-    </div>
-  );
+function TitleTheme({ theme }: TitleThemeProps) {
+  return <h3 className="title-theme">{theme}</h3>;
 }
 
 export default TitleTheme;
