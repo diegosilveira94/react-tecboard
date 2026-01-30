@@ -25,6 +25,17 @@ function EventForm() {
           />
         </Fieldset>
         <Fieldset className="fieldset-form">
+          <Label className="label-form" htmlFor="themeCover">
+            Qual o endereço da imagem de capa?
+          </Label>
+          <Input
+            className="input-form"
+            type="text"
+            id="themeCover"
+            placeholder="https://..."
+          />
+        </Fieldset>
+        <Fieldset className="fieldset-form">
           <Label className="label-form" htmlFor="eventDate">
             Data do Evento
           </Label>
@@ -34,7 +45,7 @@ function EventForm() {
           <Label className="label-form" htmlFor="eventTheme">
             Tema do Evento
           </Label>
-          <Select id="eventTheme" className="select-form" options={themes} />
+          <Select id="eventTheme" options={themes} />
         </Fieldset>
       </div>
       <div className="acoes">

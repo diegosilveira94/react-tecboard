@@ -8,4 +8,13 @@
   border: 1px solid #4a4949;
   background-color: transparent;
   color: #ffffff;
+  appearance: none;
+}
+
+.select-form .theme-options {
+  background-color: #4a4949;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-transform: capitalize;
 }
