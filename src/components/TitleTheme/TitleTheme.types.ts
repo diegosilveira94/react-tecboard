@@ -4,6 +4,5 @@ export interface Theme {
 }
 
 export interface TitleThemeProps {
-  className: string;
-  themes: Theme[];
+  theme: string;
 }
