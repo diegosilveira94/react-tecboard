@@ -6,6 +6,6 @@ export interface SelectOption {
 export interface SelectProps {
   options: SelectOption[];
   id?: string;
-  name?: string;
+  name: string;
   placeholder?: string;
 }
