@@ -1,14 +1,13 @@
-import { themes } from "./themes";
+// import { themes } from "./themes";
 
-export const events = [
-  {
-    id: "1",
-    src: "http://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
-    alt: "developer-woman",
-    theme: themes[0].name,
-    date: new Date(),
-    title: "Mulheres no Front",
-    description:
-      "Valorizando e impulsionando a participação feminina no desenvolvimento front-end.",
-  },
-];
+export interface Event {
+  id: string;
+  src: string;
+  alt: string;
+  theme: string;
+  date: Date;
+  title: string;
+  description: string;
+}
+
+export const events = [{}];

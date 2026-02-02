@@ -1,15 +1,14 @@
 import "./Select.styles.css";
 import type { SelectProps } from "./Select.types";
 
-function Select({ name, className, options }: SelectProps) {
+function Select({ id, name, options }: SelectProps) {
   return (
-    <select name={name} className={className}>
+    <select id={id} name={name} className="select-form" defaultValue="">
+      <option value="" disabled>
+        Selecione uma opção
+      </option>
       {options.map((opt) => (
-        <option
-          key={opt.id}
-          value={opt.name}
-          id={`${opt.name}-option-${opt.id}`}
-        >
+        <option className="theme-options" key={opt.id} value={opt.name}>
           {opt.name}
         </option>
       ))}
