@@ -5,7 +5,6 @@ import Label from "../Label";
 import TitleForm from "../TitleForm";
 import Select from "../Select";
 import Button from "../Button";
-import { themes } from "../../data/themes";
 
 export type EventFormData = {
   eventName: string;
@@ -14,11 +13,17 @@ export type EventFormData = {
   eventTheme: string;
 };
 
-type EventFormProps = {
-  submit: (data: EventFormData) => void;
+type Theme = {
+  id: string;
+  name: string;
 };
 
-function EventForm({ submit }: EventFormProps) {
+type EventFormProps = {
+  submit: (data: EventFormData) => void;
+  themes: Theme[];
+};
+
+function EventForm({ submit, themes }: EventFormProps) {
   function handleAction(formData: FormData) {
     const raw = Object.fromEntries(formData) as Record<
       string,

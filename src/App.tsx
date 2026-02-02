@@ -4,13 +4,12 @@ import EventForm from "./components/EventForm";
 import TitleTheme from "./components/TitleTheme";
 import EventCard from "./components/EventCard";
 import { themes } from "./data/themes";
-// import { events } from "./data/events";
 import type { EventFormData } from "./components/EventForm/EventForm";
 import type { Event } from "./data/events";
 import { useState } from "react";
 
 function App() {
-  const [events, setEventCard] = useState([
+  const [events, setEvents] = useState<Event[]>([
     {
       id: "1",
       src: "http://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
@@ -35,8 +34,7 @@ function App() {
         "Valorizando e impulsionando a participação feminina no desenvolvimento front-end",
     };
 
-    events.push(newEvent);
-    setEventCard([...events, newEvent]);
+    setEvents([...events, newEvent]);
   };
 
   return (
@@ -44,18 +42,31 @@ function App() {
       <header>
         <img src="/logo.png" alt="" />
       </header>
-      <Banner className="banner" alt="banner" src="./banner.png"></Banner>
-      <EventForm submit={toAddEvent} />
-      {themes.map((theme) => {
-        return (
-          <section key={theme.id}>
-            <TitleTheme theme={theme.name} />
-            {events.map((event, index) => {
-              return <EventCard event={event} key={index} />;
-            })}
-          </section>
-        );
-      })}
+      <Banner className="banner" alt="banner" src="./banner.png" />
+      <EventForm submit={toAddEvent} themes={themes} />
+
+      <section className="container">
+        {themes.map((theme) => {
+          const themeEvents = events.filter(
+            (event) => event.theme === theme.name,
+          );
+
+          if (themeEvents.length === 0) {
+            return null;
+          }
+
+          return (
+            <section key={theme.id}>
+              <TitleTheme theme={theme.name} />
+              <div className="events">
+                {themeEvents.map((event) => (
+                  <EventCard event={event} key={event.id} />
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </section>
     </main>
   );
 }
